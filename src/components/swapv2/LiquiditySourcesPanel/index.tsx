@@ -227,7 +227,7 @@ const LiquiditySourcesPanel: React.FC<Props> = ({ onBack }) => {
                 <ImageWrapper>
                   <img src="https://kyberswap.com/favicon.ico" alt="ks logo" />
                 </ImageWrapper>
-                <SourceName>Kyberswap - All</SourceName>
+                <SourceName>GitshockSwap - All</SourceName>
               </Source>
 
               {ksDexes

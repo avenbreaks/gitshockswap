@@ -1,14 +1,15 @@
-# KyberSwap Interface
+# GitshockSwap Interface
 
-An open source interface for KyberSwap -- a protocol for decentralized exchange.
+An open source interface for GitshockSwap -- a protocol for decentralized exchange.
 Forked from [Uniswap/uniswap-interface](https://github.com/Uniswap/uniswap-interface)
+Forked from [Kyberswap/kyberswap-interface](https://github.com/KyberNetwork/kyberswap-interface)
 
-- Website: [kyberswap.com](https://kyberswap.com/)
-- Whitepaper: [Link](https://files.kyber.network/DMM-Feb21.pdf)
+- Website: [gitshock.com](https://gitshock.com/)
+- Whitepaper: [Link](https://gitshock.gitbook.io/gitshock-whitepaper/)
 
-## Accessing the KyberSwap Interface
+## Accessing the GitshockSwap Interface
 
-To access the KyberSwap Interface, visit [kyberswap.com](https://kyberswap.com/)
+To access the KyberSwap Interface, visit [swap.gitshock.com](https://swap.gitshock.com/)
 
 ## Development
 

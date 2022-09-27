@@ -27,8 +27,8 @@ const KyberSwapGeneralIntro = () => {
         }}
       >
         <Trans>
-          KyberSwap is a decentralized exchange (DEX) aggregator. We provide our traders with the{' '}
-          <b>best token prices</b> by analyzing rates across thousands of exchanges instantly!
+          Gitshock Swap is a multinetwork decentralized exchange (DEX) aggregator powered by GTFX token. We allow users
+          to <b>swap, create tokens, stake and create pool easier!</b>
         </Trans>
       </Text>
     )
@@ -46,8 +46,8 @@ const KyberSwapGeneralIntro = () => {
         }}
       >
         <Trans>
-          KyberSwap is also an automated market maker (AMM) with industry-leading liquidity protocols and{' '}
-          <b>concentrated liquidity</b>. Liquidity providers can add liquidity to our pools & <b>earn fees</b>!
+          Gitshock Swap is also playing an automated market maker (AMM) where liquidity providers can add liquidity to
+          our multinetwork pools and earn! <b>Use your GTFX to stake, validate and propose</b> your ideas to community!
         </Trans>
       </Text>
     )
@@ -85,7 +85,7 @@ const KyberSwapGeneralIntro = () => {
       >
         <MoneyBagOutline color={theme.primary} size={20} />
         <Text fontSize="14px" marginLeft="8px">
-          <Trans>Start Earning</Trans>
+          <Trans>Coming Soon</Trans>
         </Text>
       </ButtonLight>
     )

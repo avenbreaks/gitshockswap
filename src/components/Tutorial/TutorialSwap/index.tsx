@@ -119,21 +119,21 @@ function Welcome() {
       <img src={WelcomeImage} alt="welcome to kyberswap" style={{ maxWidth: '100%', marginTop: 10 }} />
       <Desc>
         <Trans>
-          KyberSwap is a decentralized exchange (DEX) aggregator. We provide our traders with the{' '}
-          <HighlightText>best token prices</HighlightText> by analyzing rates across thousands of exchanges instantly!
+          Gitshock Swap is a multinetwork decentralized exchange (DEX) aggregator powered by GTFX token. We allow users
+          to <HighlightText>swap, create tokens, stake and create</HighlightText> pool easier!
         </Trans>
       </Desc>
       <Desc>
         <Trans>
-          KyberSwap is also an automated market maker (AMM) with industry-leading liquidity protocols and{' '}
-          <HighlightText>concentrated liquidity</HighlightText>. Liquidity providers can add liquidity to our pools &{' '}
-          <HighlightText>earn fees</HighlightText>!
+          Gitshock Swap is also playing an automated market maker (AMM) where liquidity providers can add liquidity to{' '}
+          <HighlightText>our multinetwork pools and earn!</HighlightText>our multinetwork pools and earn!{' '}
+          <HighlightText> your ideas to community!</HighlightText>!
         </Trans>
       </Desc>
       <Desc>
         <Trans>
-          We created this <HighlightText>quick tutorial</HighlightText> guide for you to highlight KyberSwap&#39;s main
-          features.
+          We created this <HighlightText>quick tutorial</HighlightText> guide for you to highlight GitshockSwap&#39;s
+          main features.
         </Trans>
       </Desc>
       <Desc>
