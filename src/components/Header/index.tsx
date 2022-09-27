@@ -348,7 +348,7 @@ export default function Header() {
         <HeaderLinks>
           <HoverDropdown active={pathname.includes('/swap') || pathname === '/buy-crypto'}>
             <Flex alignItems="center">
-              <Trans>Swap</Trans>
+              <Trans>Trade</Trans>
               <DropdownIcon />
             </Flex>
 
@@ -366,7 +366,7 @@ export default function Header() {
               </StyledNavLink>{' '}
               <StyledNavLink
                 id={`buy-crypto-nav-link`}
-                to={'/buy-crypto'}
+                to={''}
                 isActive={match => Boolean(match)}
                 onClick={() => {
                   mixpanelHandler(MIXPANEL_TYPE.SWAP_BUY_CRYPTO_CLICKED)
@@ -374,10 +374,10 @@ export default function Header() {
               >
                 <Flex alignItems="center" sx={{ gap: '8px' }}>
                   <Dollar />
-                  <Trans>Buy Crypto</Trans>
+                  <Trans>Create Tokens</Trans>
                   <Flex sx={{ gap: '8px' }}>
-                    <VisaSVG width="20" height="20" />
-                    <MasterCard width="20" height="20" />
+                    <VisaSVG width="0" height="0" />
+                    <MasterCard width="0" height="0" />
                   </Flex>
                 </Flex>
               </StyledNavLink>
@@ -426,7 +426,7 @@ export default function Header() {
                 >
                   <Trans>Farms</Trans>
                   <NewLabel>
-                    <Trans>New</Trans>
+                    <Trans>Beta</Trans>
                   </NewLabel>
                 </StyledNavLink>
               </Dropdown>
@@ -435,11 +435,11 @@ export default function Header() {
 
           {!under369 && (
             <CampaignWrapper id={TutorialIds.CAMPAIGN_LINK}>
-              <StyledNavLink id={`campaigns`} to={'/campaigns'} isActive={match => Boolean(match)}>
-                <Trans>Campaigns</Trans>
+              <StyledNavLink id={`campaigns`} to={''} isActive={match => Boolean(match)}>
+                <Trans>Launchpad</Trans>
                 {!under500 && (
                   <NewLabel>
-                    <Trans>New</Trans>
+                    <Trans>Beta</Trans>
                   </NewLabel>
                 )}
               </StyledNavLink>
@@ -459,7 +459,7 @@ export default function Header() {
               >
                 <Trans>Discover</Trans>
               </SlideToUnlock>
-              <DiscoverIcon size={14} style={{ marginTop: '-20px', marginLeft: '4px' }} />
+              <DiscoverIcon size={0} style={{ marginTop: '0px', marginLeft: '0px' }} />
             </StyledNavLink>
           </DiscoverWrapper>
 

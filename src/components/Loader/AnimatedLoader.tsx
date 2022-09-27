@@ -5,8 +5,8 @@ import LoadingLogo from 'assets/svg/loading_logo.svg'
 
 const loadingAnimation = keyframes`
   0% { transform: rotate(0deg) }
-  50% { transform: rotate(180deg) }
-  100% { transform: rotate(360deg) }
+  0% { transform: rotate(180deg) }
+  0% { transform: rotate(360deg) }
 `
 
 const Wrapper = styled.div<{ size: number }>`
@@ -18,8 +18,8 @@ const Wrapper = styled.div<{ size: number }>`
 `
 
 const Inner = styled.div<{ size: number }>`
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
   position: relative;
   display: flex;
   align-items: center;
@@ -32,22 +32,22 @@ const Inner = styled.div<{ size: number }>`
     animation: ${loadingAnimation} 1s linear infinite;
     width: ${({ size }) => size * 0.8}px;
     height: ${({ size }) => size * 0.8}px;
-    top: ${({ size }) => size * 0.1}px;
-    left: ${({ size }) => size * 0.1}px;
-    border-radius: 50%;
-    box-shadow: 0 ${({ size }) => (size >= 200 ? '3px' : '2px')} 0 0 ${({ theme }) => theme.primary};
-    transform-origin: ${({ size }) => `${size * 0.4}px ${size * 0.41}px`};
+    top: ${({ size }) => size * 0}px;
+    left: ${({ size }) => size * 0}px;
+    border-radius: 0%;
+    box-shadow: 0 ${({ size }) => (size >= 200 ? '0px' : '0px')} 0 0 ${({ theme }) => theme.primary};
+    transform-origin: ${({ size }) => `${size * 0}px ${size * 0}px`};
     box-sizing: content-box;
   }
 `
 
-function AnimateLoader({ size = 160 }: { size?: number }) {
+function AnimateLoader({ size = 0 }: { size?: number }) {
   return (
     <Wrapper size={size}>
       <Inner size={size}>
         <div />
         <div />
-        <img src={LoadingLogo} width="30%" alt="" />
+        <img src={LoadingLogo} width="0%" alt="" />
       </Inner>
     </Wrapper>
   )

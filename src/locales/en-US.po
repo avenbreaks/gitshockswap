@@ -1450,8 +1450,8 @@ msgid "Include Tokens"
 msgstr "Include Tokens"
 
 #: src/pages/About/AboutKyberSwap.tsx
-msgid "Includes DEX aggregation"
-msgstr "Includes DEX aggregation"
+msgid ""
+msgstr ""
 
 #: src/pages/IncreaseLiquidity/index.tsx
 msgid "Increase Amount"

@@ -7,8 +7,6 @@ import { Box, Flex, Text } from 'rebass'
 import styled from 'styled-components'
 
 import KNCGraphic from 'assets/images/knc-graphic.png'
-import githubImg from 'assets/svg/about_icon_github.png'
-import githubImgLight from 'assets/svg/about_icon_github_light.png'
 import ForTraderImage from 'assets/svg/for_trader.svg'
 import ForTraderImageLight from 'assets/svg/for_trader_light.svg'
 import { ReactComponent as KNCSVG } from 'assets/svg/knc_black.svg'
@@ -47,7 +45,6 @@ import {
   VelasLogoFull,
 } from 'components/Icons'
 import AntiSnippingAttack from 'components/Icons/AntiSnippingAttack'
-import Loader from 'components/Loader'
 import { MAINNET_NETWORKS } from 'constants/networks'
 import { VERSION } from 'constants/v2'
 import useMixpanel, { MIXPANEL_TYPE } from 'hooks/useMixpanel'
@@ -55,7 +52,6 @@ import useTheme from 'hooks/useTheme'
 import { useGlobalData } from 'state/about/hooks'
 import { useDarkModeManager } from 'state/user/hooks'
 import { ExternalLink, StyledInternalLink } from 'theme'
-import { formatBigLiquidity } from 'utils/formatBalance'
 
 import KyberSwapGeneralIntro from './KyberSwapGeneralIntro'
 import {
@@ -63,7 +59,6 @@ import {
   AboutPage,
   BtnOutlined,
   BtnPrimary,
-  CommittedToSecurityDivider,
   Footer,
   FooterContainer,
   ForLiquidityProviderItem,
@@ -472,13 +467,13 @@ function AboutKyberSwap() {
           <Text as="h1" fontSize={['28px', '48px']} textAlign="center" lineHeight={['32px', '60px']} fontWeight="300">
             <Trans>
               <Text color={theme.primary} as="span" fontWeight="500">
-                Swap
+                Enjoy
               </Text>{' '}
-              and{' '}
+              the Best{' '}
               <Text fontWeight="500" color={theme.primary} as="span">
-                Earn
+                DEX
               </Text>{' '}
-              Tokens at the Best Rates
+              Trading Experience
             </Trans>
           </Text>
 
@@ -505,37 +500,25 @@ function AboutKyberSwap() {
               <Flex sx={{ gap: '16px' }} flex={2}>
                 <StatisticItem>
                   <Text fontSize={['24px', '28px']} fontWeight={600}>
-                    {dataToShow.totalTradingVolume ? (
-                      formatBigLiquidity(dataToShow.totalTradingVolume, 2, true)
-                    ) : (
-                      <Loader />
-                    )}
+                    N/a
                   </Text>
                   <Text color={theme.subText} marginTop="8px">
-                    <Trans>Total Trading Volume</Trans>*
+                    <Trans>Total Create Tokens</Trans>
                   </Text>
                 </StatisticItem>
                 <StatisticItem>
                   <Text fontSize={['24px', '28px']} fontWeight={600}>
-                    {dataToShow['24hTradingVolume'] ? (
-                      formatBigLiquidity(dataToShow['24hTradingVolume'], 2, true)
-                    ) : (
-                      <Loader />
-                    )}
+                    N/a
                   </Text>
                   <Text color={theme.subText} marginTop="8px">
-                    <Trans>24H Trading Volume</Trans>*
+                    <Trans>24H Trading Volume</Trans>
                   </Text>
                 </StatisticItem>
               </Flex>
               <Flex sx={{ gap: '16px' }} flex={2}>
                 <StatisticItem>
                   <Text fontSize={['24px', '28px']} fontWeight={600}>
-                    {dataToShow.totalValueLocked ? (
-                      formatBigLiquidity(dataToShow.totalValueLocked, 2, true)
-                    ) : (
-                      <Loader />
-                    )}
+                    N/a
                   </Text>
                   <Text color={theme.subText} marginTop="8px">
                     <Trans>Total Value Locked</Trans>
@@ -543,14 +526,10 @@ function AboutKyberSwap() {
                 </StatisticItem>
                 <StatisticItem>
                   <Text fontSize={['24px', '28px']} fontWeight={600}>
-                    {dataToShow.totalAMPLiquidity ? (
-                      formatBigLiquidity(dataToShow.totalAMPLiquidity, 2, true)
-                    ) : (
-                      <Loader />
-                    )}
+                    N/a
                   </Text>
                   <Text color={theme.subText} marginTop="8px">
-                    <Trans>Total AMP Liquidity</Trans>**
+                    <Trans>Total Liquidity</Trans>
                   </Text>
                 </StatisticItem>
               </Flex>
@@ -562,10 +541,10 @@ function AboutKyberSwap() {
                   {dataToShow.totalEarnings > 0 && (
                     <StatisticItem>
                       <Text fontSize={['24px', '28px']} fontWeight={600}>
-                        {formatBigLiquidity(dataToShow.totalEarnings.toString() ?? 0, 2, true)}
+                        N/a
                       </Text>
                       <Text color={theme.subText} marginTop="8px">
-                        <Trans>Total Earnings</Trans>
+                        <Trans>Total Lock IBC Stake</Trans>
                       </Text>
                     </StatisticItem>
                   )}
@@ -574,7 +553,7 @@ function AboutKyberSwap() {
                       <Text fontSize={['24px', '28px']} fontWeight={600}>
                         {dataToShow.maxAPRAvailable.value.toFixed(2) + '%'}
                       </Text>
-                      <Text color={theme.subText} marginTop="8px">
+                      <Text color={theme.subText} marginTop="0px">
                         <Link
                           to={`/${dataToShow.maxAPRAvailable.is_farm ? 'farms' : 'pools'}?tab=classic&networkId=${
                             dataToShow.maxAPRAvailable.chain_id
@@ -589,13 +568,13 @@ function AboutKyberSwap() {
                 </Flex>
               )}
             </StatisticWrapper>
-            <Text fontStyle="italic" textAlign="right" fontSize="12px" marginTop="12px" color={theme.subText}>
+            <Text fontStyle="italic" textAlign="right" fontSize="0px" marginTop="0px" color={theme.subText}>
               *<Trans>Includes DEX aggregation</Trans>
             </Text>
-            <Text fontStyle="italic" textAlign="right" fontSize="12px" marginTop="8px" color={theme.subText}>
+            <Text fontStyle="italic" textAlign="right" fontSize="0px" marginTop="0px" color={theme.subText}>
               **<Trans>TVL equivalent compared to AMMs</Trans>
             </Text>
-            <Text fontStyle="italic" textAlign="right" fontSize="12px" marginTop="8px" color={theme.subText}>
+            <Text fontStyle="italic" textAlign="right" fontSize="0px" marginTop="0px" color={theme.subText}>
               **<Trans>Applicable to KyberSwap Classic</Trans>
             </Text>
           </OverflowStatisticWrapper>
@@ -852,88 +831,14 @@ function AboutKyberSwap() {
             </Flex>
           )}
 
-          <Text as="h2" marginTop={['100px', '160px']} fontSize={['28px', '36px']} fontWeight="500" textAlign="center">
-            <Trans>Committed to Security</Trans>
-          </Text>
-
-          <Flex
-            marginTop="40px"
-            sx={{ gap: above992 ? '24px' : '0' }}
-            flexDirection={above992 ? 'row' : 'column'}
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Flex
-              flex={1}
-              sx={{ gap: above992 ? '24px' : '10px' }}
-              alignItems="center"
-              justifyContent="center"
-              width="100%"
-            >
-              <div style={{ flex: 1, textAlign: 'center' }}>
-                <Text color={theme.subText} textAlign="center" marginBottom={above992 ? '21px' : '14px'}>
-                  <Trans>Code Audited</Trans>
-                </Text>
-
-                <ButtonEmpty padding="0">
-                  <ExternalLink href="https://chainsecurity.com/security-audit/kyberswap-elastic">
-                    <img
-                      src={
-                        !isDarkMode
-                          ? 'https://chainsecurity.com/wp-content/themes/chainsecurity-wp/resources/images/temp/logo.svg'
-                          : require('../../assets/svg/chainsecurity.svg').default
-                      }
-                      alt="security"
-                      width={above992 ? '197px' : '140px'}
-                    />
-                  </ExternalLink>
-                </ButtonEmpty>
-              </div>
-            </Flex>
-
-            {above992 ? <CommittedToSecurityDivider /> : <div />}
-
-            <Flex
-              flex={2}
-              sx={{ gap: above992 ? '24px' : '10px' }}
-              alignItems="center"
-              justifyContent="center"
-              width="100%"
-              marginTop={above992 ? '0' : '16px'}
-            >
-              <div style={{ flex: 1, textAlign: 'center' }}>
-                <Text color={theme.subText} textAlign="center" marginBottom={above992 ? '16px' : '12px'}>
-                  <Trans>On-chain & Open Source</Trans>
-                </Text>
-                <ButtonEmpty padding="0">
-                  <ExternalLink href="https://github.com/KyberNetwork">
-                    <img src={isDarkMode ? githubImg : githubImgLight} alt="github" width="125px" />
-                  </ExternalLink>
-                </ButtonEmpty>
-              </div>
-              <CommittedToSecurityDivider height={!above992 ? '90px' : undefined} />
-
-              <div style={{ flex: 1, textAlign: 'center' }}>
-                <Text color={theme.subText} textAlign="center" marginBottom="16px">
-                  <Trans>Bug Bounty</Trans>
-                </Text>
-                <img
-                  src={require('../../assets/svg/about_icon_bug_bounty.svg').default}
-                  alt="bugbounty"
-                  width={above992 ? '186px' : '140px'}
-                />
-              </div>
-            </Flex>
-          </Flex>
-
           <AboutKNC>
             <img height="400px" src={KNCGraphic} alt="KNCGraphic" style={{ display: above768 ? 'block' : 'none' }} />
             <Flex width="100%" alignSelf="center" flexDirection="column" height="max-content">
               <Text fontSize={['16px', '20px']} fontWeight={500} color={theme.primary}>
-                <Trans>ABOUT KNC</Trans>
+                <Trans>About</Trans>
               </Text>
               <Text as="h2" marginTop="12px" fontSize={['28px', '36px']} fontWeight="500">
-                <Trans>Kyber Network Crystal (KNC)</Trans>
+                <Trans>Gitshock Finance Token (GTFX)</Trans>
               </Text>
               <Text
                 fontSize="16px"
@@ -943,14 +848,15 @@ function AboutKyberSwap() {
                 textAlign="justify"
               >
                 <Trans>
-                  KNC is a utility and governance token, and an integral part of Kyber Network and its flagship product
-                  KyberSwap. It is the glue that connects different stakeholders in Kyber&apos;s ecosystem
+                  Gitshock Finance Token (GTFX) is a multichain token which serves as a governance token of Gitshock
+                  Finance Project. The Gitshock ecosystem including Gitshock Mainnet, Gitshocks Neware chain and other
+                  products will be powered with it.
                 </Trans>
               </Text>
               <img
                 width="75%"
                 src={KNCGraphic}
-                alt="KNCGraphic"
+                alt="GTFXGraphic"
                 style={{ display: above768 ? 'none' : 'block', margin: 'auto', marginTop: '40px' }}
               />
               <BtnPrimary as={Link} to="/about/knc" margin="48px 0">

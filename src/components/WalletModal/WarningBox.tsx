@@ -47,7 +47,7 @@ const Step = styled.div`
   height: 24px;
   background-color: rgba(49, 203, 158, 0.2);
   border-radius: 50%;
-  color: #31cb9e;
+  color: #cc6fdc;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -141,7 +141,7 @@ const TopTrendingSoonTokensInCurrentNetwork = () => {
                 ))}
               </Flex>
               <ExternalLink
-                href={window.location.origin + '/discover?tab=trending_soon'}
+                href={window.location.origin + ''}
                 onClickCapture={() => mixpanelHandler(MIXPANEL_TYPE.DISCOVER_SWAP_DISCOVER_MORE_CLICKED)}
               >
                 <ButtonLight

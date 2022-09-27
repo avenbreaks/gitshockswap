@@ -4,9 +4,9 @@ import styled, { css, keyframes } from 'styled-components'
 import { useIsDarkMode } from 'state/user/hooks'
 
 const pulse = keyframes`
-  0% { transform: scale(1); }
-  60% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% { transform: scale(0); }
+  0% { transform: scale(0); }
+  0% { transform: scale(0); }
 `
 
 const Wrapper = styled.div<{ fill?: boolean; height?: string }>`
@@ -14,23 +14,23 @@ const Wrapper = styled.div<{ fill?: boolean; height?: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  height: 0%;
+  width: 0%;
 
   ${props =>
     props.fill && !props.height
       ? css`
-          height: 100vh;
+          height: 0vh;
         `
       : css`
-          height: 180px;
+          height: 0px;
         `}
 `
 
 const AnimatedImg = styled.div`
-  animation: ${pulse} 800ms linear infinite;
+  animation: ${pulse} 0ms linear infinite;
   & > * {
-    width: 180px;
+    width: 0px;
   }
 `
 

@@ -1519,7 +1519,7 @@ msgid "Include Tokens"
 msgstr ""
 
 #: src/pages/About/AboutKyberSwap.tsx
-msgid "Includes DEX aggregation"
+msgid ""
 msgstr ""
 
 #: src/pages/IncreaseLiquidity/index.tsx

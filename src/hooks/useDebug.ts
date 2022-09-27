@@ -50,7 +50,7 @@ export default function useDebug(
         `%c[${new Date().toISOString().slice(11, 19)}] %cDebug found changed %c${props.title} (${
           instances.indexOf(instanceRef.current) + 1
         }/${instances.length}) ${hasRealChanged ? '' : '🆘 🆘 🆘'}`,
-        'color: #31CB9E',
+        'color: #7bb4fc',
         'color: unset',
         'color: #b5a400',
       )

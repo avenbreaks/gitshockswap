@@ -71,7 +71,7 @@ export const RegisterCampaignBackground = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
-  box-shadow: 0 0 16px 1px #31cb9e;
+  box-shadow: 0 0 16px 1px #cc6fdc;
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     gap: 12px;

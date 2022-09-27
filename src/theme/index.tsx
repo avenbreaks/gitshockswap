@@ -79,8 +79,8 @@ export function colors(darkMode: boolean): Colors {
     bg3Opacity4: darkMode ? '#40444F69' : '#69dcdbdc69',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : '#888D9B',
-    bg7: darkMode ? '#31CB9E' : '#98e5ce',
-    bg8: darkMode ? '#1d7a5f' : '#31CB9E',
+    bg7: darkMode ? '#45496a' : '#98e5ce',
+    bg8: darkMode ? '#1d7a5f' : '#7bb4fc',
     bg9: darkMode ? '#1d2a32' : '#ecebeb',
     bg10: darkMode ? '#263239' : '#f5f5f5',
     bg11: darkMode ? '#1b2226' : '#ebeaea',
@@ -88,7 +88,7 @@ export function colors(darkMode: boolean): Colors {
     bg14: darkMode ? '#40505a' : '#a9a9a9',
     bg15: darkMode ? '#1f292e' : '#f5f5f5',
     bg16: darkMode ? '#1f292e' : '#ffffff',
-    bg17: darkMode ? '#31cb9e33' : '#31cb9e1a',
+    bg17: darkMode ? '#7bb4fc' : '#7bb4fc',
     bg18: darkMode ? '#1a4052' : '#ecebeb',
     bg19: darkMode ? '#222c31' : '#ffffff',
     bg20: darkMode ? '#243036' : '#F5F5F5',
@@ -108,11 +108,11 @@ export function colors(darkMode: boolean): Colors {
     advancedBorder: darkMode ? '#303e46' : '#dcdbdc',
 
     //primary colors
-    primary: '#31CB9E',
+    primary: '#7bb4fc',
 
     // border colors
     border: darkMode ? '#505050' : '#C1C1C1',
-    btnOutline: darkMode ? '#31cb9e' : '#333333',
+    btnOutline: darkMode ? '#7bb4fc' : '#333333',
 
     // table colors
     oddRow: darkMode ? '#283339' : '#ffffff',
@@ -127,14 +127,14 @@ export function colors(darkMode: boolean): Colors {
     red1: '#FF6871',
     red2: '#F82D3A',
     red3: '#D60000',
-    green: '#31CB9E',
+    green: '#7bb4fc',
     green1: '#27AE60',
     yellow1: '#FFE270',
     yellow2: '#F3841E',
-    blue1: '#31cb9e',
+    blue1: '#7bb4fc',
     lightBlue: '#78d5ff',
     darkBlue: '#1183b7',
-    blue: darkMode ? '#78d5ff' : '#31cb9e',
+    blue: darkMode ? '#78d5ff' : '#7bb4fc',
     shadow: darkMode ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.04)',
   }
 }
